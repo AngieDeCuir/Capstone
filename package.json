@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "parcel-build": "parcel build index.html && cp _redirects ./dist/",
+    "serve": "parcel index.html",
+    "app:watch": "nodemon --watch ./server -e js ./server/app.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -14,6 +18,12 @@
     "prettier": "1.19.1"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "html-literal": "^1.1.0",
+    "lodash": "^4.17.21",
+    "navigo": "^8.11.1",
+    "parcel": "^2.6.2",
     "yargs-parser": ">=13.1.2"
   }
 }
